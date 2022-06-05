@@ -1,0 +1,32 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93.228" height="93.228" viewBox="0 0 93.228 93.228">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="93.228" height="93.228" rx="19" fill="#d8d8d8"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.757" x2="0" y2="0.242" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#001d49"/>
+      <stop offset="1" stop-color="#dde3ec"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M0,26.991A23.587,23.587,0,0,1,20.245,3.661v13.82A10.1,10.1,0,1,0,33.129,30.365H46.95A23.594,23.594,0,0,1,0,26.991Zm50.607,0H30.366a6.752,6.752,0,0,0-6.749-6.747V0A27.021,27.021,0,0,1,50.609,26.989v0ZM26.992,17.447a10.246,10.246,0,0,1,6.17,6.17H47a23.673,23.673,0,0,0-20-20Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Color_Primary" data-name="Color/Primary" opacity="0.201">
+    <rect id="Mask-2" data-name="Mask" width="93.228" height="93.228" rx="19" fill="#d8d8d8"/>
+    <g id="Color_Primary-2" data-name="Color/Primary" clip-path="url(#clip-path)">
+      <g id="Color_Primary-3" data-name="Color/Primary">
+        <rect id="Rectangle" width="93.228" height="93.228" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+  <g id="pie-chart" transform="translate(21.309 21.309)">
+    <g id="Group_6" data-name="Group 6">
+      <path id="Combined_Shape-2" data-name="Combined Shape" d="M0,26.991A23.587,23.587,0,0,1,20.245,3.661v13.82A10.1,10.1,0,1,0,33.129,30.365H46.95A23.594,23.594,0,0,1,0,26.991Zm50.607,0H30.366a6.752,6.752,0,0,0-6.749-6.747V0A27.021,27.021,0,0,1,50.609,26.989v0ZM26.992,17.447a10.246,10.246,0,0,1,6.17,6.17H47a23.673,23.673,0,0,0-20-20Z" fill="none"/>
+      <g id="Mask_Group_6" data-name="Mask Group 6" clip-path="url(#clip-path-2)">
+        <g id="_color" data-name="🎨 color" transform="translate(0 0)">
+          <rect id="Rectangle-2" data-name="Rectangle" width="50.61" height="50.608" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

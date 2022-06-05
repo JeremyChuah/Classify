@@ -1,0 +1,23 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93.228" height="93.228" viewBox="0 0 93.228 93.228">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="93.228" height="93.228" rx="19" fill="#d8d8d8"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.757" x2="0" y2="0.242" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#001d49"/>
+      <stop offset="1" stop-color="#dde3ec"/>
+    </linearGradient>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 96 96">
+      <image width="96" height="96" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+  </defs>
+  <g id="Color_Primary" data-name="Color/Primary" opacity="0.201">
+    <rect id="Mask-2" data-name="Mask" width="93.228" height="93.228" rx="19" fill="#d8d8d8"/>
+    <g id="Color_Primary-2" data-name="Color/Primary" clip-path="url(#clip-path)">
+      <g id="Color_Primary-3" data-name="Color/Primary">
+        <rect id="Rectangle" width="93.228" height="93.228" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+  <rect id="icons8-a-96" width="59" height="59" transform="translate(17.379 20.022)" fill="url(#pattern)"/>
+</svg>
