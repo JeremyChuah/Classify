@@ -11,7 +11,7 @@ const classcard = (props) => {
           </h1>
         </div>
         <h2 className="text-left">{props.description}</h2>
-        <a href="#">Read More</a>
+        <a href="#">Read More lol</a>
       </div>
     </div>
   );
