@@ -1,6 +1,10 @@
 import React from "react";
 import Classcard from "./classcard.js";
-import Icon from "./cardimages/Icon-4.svg";
+import Geography from "./cardimages/geography.svg";
+import Math from "./cardimages/math.svg";
+import History from "./cardimages/history.svg";
+import Science from "./cardimages/science.svg";
+import English from "./cardimages/english.svg";
 import "../homecomponents/classgrid.css";
 
 function classgrid() {
@@ -18,28 +22,28 @@ function classgrid() {
             </div>
           </div>
           <Classcard
-            image={Icon}
-            name="math"
+            image={Math}
+            name="Math"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
           <Classcard
-            image={Icon}
-            name="math"
+            image={Science}
+            name="Science"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
           <Classcard
-            image={Icon}
-            name="math"
+            image={History}
+            name="History"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
           <Classcard
-            image={Icon}
-            name="math"
+            image={English}
+            name="English"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
           <Classcard
-            image={Icon}
-            name="math"
+            image={Geography}
+            name="Geography"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
         </div>

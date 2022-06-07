@@ -10,8 +10,10 @@ const classcard = (props) => {
             {props.name}
           </h1>
         </div>
-        <h2 className="text-left">{props.description}</h2>
-        <a href="#">Read More lol</a>
+        <h2 className="text-left my-3">{props.description}</h2>
+        <a href="#" className="hover:font-semibold">
+          Read More
+        </a>
       </div>
     </div>
   );
