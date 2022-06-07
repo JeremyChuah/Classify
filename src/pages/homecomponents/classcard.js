@@ -2,7 +2,7 @@ import React from "react";
 
 const classcard = (props) => {
   return (
-    <div className="flex my-5 justify-between items-center">
+    <div className="flex justify-between items-center">
       <div className="bg-white rounded-lg shadow-md flex flex-col p-5 items-start">
         <div className="flex flex-row items-center">
           <img src={props.image} />

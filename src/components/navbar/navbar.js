@@ -5,7 +5,7 @@ import searchIcon from "./search.svg";
 
 function navbar() {
   return (
-    <div className="flex justfy-center items-center mt-10">
+    <div className="flex flex-row w-full justfy-center items-center mt-10">
       <div className=" sm:w-4/5 w-72 m-auto items-center flex flex-row justify-between shadow-2xl rounded-xl">
         <div>
           <img src={classifyLogo} />
