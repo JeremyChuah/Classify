@@ -24,7 +24,7 @@ function homecomponents() {
             className="p-2 rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10"
           />
           <button className="mt-6 mb-20 bg-classifyBlue text-white p-2 rounded-lg px-10">
-            Searchl
+            Search
           </button>
         </div>
         <div>
