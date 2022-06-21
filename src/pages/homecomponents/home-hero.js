@@ -10,7 +10,7 @@ function homecomponents() {
   return (
     <div className="md:w-full md:flex md:flex-col md:justify-between md:items-center mt-20">
       <div className="md:grid md:grid-cols-2 m-auto">
-        <div className="flex flex-col justify-center items-center w-full px-48">
+        <div className="flex flex-col justify-center items-center w-full px-48 text-center md:text-left">
           <h1 className="text-4xl font-bold text-classifyBlue lg:w-full md:w-72 mb-5 lg:mb-2 w-96">
             Search for Class
           </h1>

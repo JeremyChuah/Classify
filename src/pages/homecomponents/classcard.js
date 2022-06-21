@@ -6,7 +6,7 @@ const classcard = (props) => {
       <div className="bg-white rounded-lg shadow-lg flex flex-col p-5 items-start">
         <div className="flex flex-row items-center">
           <img src={props.image} />
-          <h1 className="text-xl font-bold lg:pl-20 md:pl-10 pl-20 text-classifyBlue">
+          <h1 className="text-xl font-bold lg:pl-20 md:pl-10 pl-20 text-classifyBlue lg:text-xl md:text-md">
             {props.name}
           </h1>
         </div>
