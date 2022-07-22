@@ -19,29 +19,21 @@ function navbar() {
           </li>
           <li className="menu-list-item sm:px-7 md:px-16">
             <Link
-              to="CourseLoad"
-              className="hover:text-blue-700 hover:font-semibold"
-            >
-              Personal Course Load
-            </Link>
-          </li>
-          <li className="menu-list-item sm:px-7 md:px-16">
-            <Link
-              to="/FindClass"
+              to="/ClassCatalog"
               className="hover:text-blue-700 hover:font-semibold"
             >
               Find a Course
             </Link>
           </li>
+          <li className="menu-list-item sm:px-7 md:px-16">
+            <Link
+              to="CourseLoad"
+              className="hover:text-blue-700 hover:font-semibold"
+            >
+              About Us
+            </Link>
+          </li>
         </ul>
-        <div className="hidden lg:flex mr-5 relative items-center">
-          <img src={searchIcon} className="px-2 absolute" />
-          <input
-            placeholder="Search"
-            type="text"
-            className="pl-10 py-2 text-black rounded-2xl border-2 outline-0"
-          />
-        </div>
       </div>
     </div>
   );

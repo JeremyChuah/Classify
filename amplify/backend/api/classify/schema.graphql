@@ -1,0 +1,16 @@
+type Comment @model @auth(rules: [{ allow: public }]){
+  id: ID!
+  subject: String!
+  content: String!
+  classID: ID! @index(name: "byClass")
+}
+
+type Class @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  name: String!
+  enjoyment: Float!
+  difficulty: Float!
+  load: Float!
+  homework: Float!
+  Comments: [Comment] @hasMany(indexName: "byClass", fields: ["id"])
+} 

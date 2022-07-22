@@ -24,7 +24,7 @@ const footer = () => {
             </div>
             <div class="w-full px-4 mt-4 lg:w-1/4 md:w-1/4">
               <Link
-                to="/FindClass"
+                to="/ClassCatalog"
                 class="text-gray-500 cursor-pointer hover:text-gray-900"
               >
                 Find a Course

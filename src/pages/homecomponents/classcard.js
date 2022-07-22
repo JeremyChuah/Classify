@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const classcard = (props) => {
   return (
@@ -11,9 +12,12 @@ const classcard = (props) => {
           </h1>
         </div>
         <h2 className="text-left my-3">{props.description}</h2>
-        <a href="#" className="hover:font-semibold">
-          Read More
-        </a>
+        <Link
+          to={`/ClassCatalog`}
+          className="hover:font-bold hover:text-blue-600 font-semibold"
+        >
+          Look through our Catalog
+        </Link>
       </div>
     </div>
   );

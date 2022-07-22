@@ -43,7 +43,7 @@ function classgrid() {
           />
           <Classcard
             image={Geography}
-            name="Geography"
+            name="electives"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
           />
         </div>

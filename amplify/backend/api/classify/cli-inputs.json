@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "classify",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\sls\\Website\\sls-website\\amplify\\backend\\api\\classify\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-07-21T22:48:30.424Z",
+      "keyDescription": ""
+    }
+  }
+}

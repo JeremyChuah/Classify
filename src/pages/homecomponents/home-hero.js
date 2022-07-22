@@ -1,5 +1,6 @@
 import React from "react";
 import icon from "./homeheroicon.svg";
+import SearchIcon from "@mui/icons-material/Search";
 
 //className="w-full flex flex-col justify-between items-center mt-20"
 //className="grid md:grid-cols-2 m-auto"
@@ -18,14 +19,20 @@ function homecomponents() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incidid
           </p>
-          <input
-            type="text"
-            placeholder="Enter Class Name"
-            className="p-2 rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10"
-          />
-          <button className="mt-6 mb-20 bg-classifyBlue text-white p-2 rounded-lg px-10">
+          <div className="sm:w-full p-2 flex flex-row sm:justify-between rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10 mb-4">
+            <input
+              type="text"
+              placeholder="Enter Class Name"
+              className="border-0 outline-none w-full"
+            />
+
+            <div>
+              <SearchIcon />
+            </div>
+          </div>
+          {/* <button className="mt-6 mb-20 bg-classifyBlue text-white p-2 rounded-lg px-10">
             Search
-          </button>
+          </button> */}
         </div>
         <div>
           <img src={icon} />
