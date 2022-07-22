@@ -16,7 +16,7 @@ const classcard = (props) => {
           to={`/ClassCatalog`}
           className="hover:font-bold hover:text-blue-600 font-semibold"
         >
-          Look through our Catalog
+          Look through our Catalo
         </Link>
       </div>
     </div>
