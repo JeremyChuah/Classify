@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import MeterBoard from "./ClassInfoPageComponents/meterBoard";
 import { Link } from "react-router-dom";
+import { v4 } from "uuid";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import Popup from "./ClassInfoPageComponents/Popup";
 import client from "./ClassInfoPageComponents/meet-with-client.svg";
 import CommentCard from "./ClassInfoPageComponents/commentCard";
 import AddRating from "./ClassInfoPageComponents/addRating";
+import { API } from "aws-amplify";
+import { createClass } from "../graphql/mutations.js";
 
 function ClassInfo(props) {
   const [openPopup, setOpenPopup] = useState(false);

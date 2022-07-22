@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useEffect } from "react";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const classInfoCard = (props) => {
   return (
