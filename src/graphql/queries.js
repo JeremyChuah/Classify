@@ -41,6 +41,7 @@ export const getClass = /* GraphQL */ `
       difficulty
       load
       homework
+      entries
       Comments {
         items {
           id
@@ -71,6 +72,7 @@ export const listClasses = /* GraphQL */ `
         difficulty
         load
         homework
+        entries
         Comments {
           nextToken
         }

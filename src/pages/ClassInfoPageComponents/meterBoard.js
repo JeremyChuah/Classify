@@ -1,7 +1,7 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-function meterBoard() {
+function meterBoard(props) {
   return (
     <div className="bg-white shadow-xl rounded-md p-10 outline-2 outline outline-offset-2 outline-slate-600	text-center">
       <div className="mb-5">

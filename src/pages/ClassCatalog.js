@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Card from "./classcatalogcomponents/classInfoCard.js";
 import classes from "./classes.js";
+import { v4 } from "uuid";
 import { API, graphqlOperation } from "aws-amplify";
 import { listClasses } from "../graphql/queries.js";
+import { createClass } from "../graphql/mutations.js";
 import mathIcon from "./homecomponents/cardimages/math.svg";
 
 const ClassCatalog = () => {
@@ -30,6 +32,23 @@ const ClassCatalog = () => {
     }
   }
 
+  const handleClick = async () => {
+    await API.graphql({
+      query: createClass,
+      variables: {
+        input: {
+          id: v4(),
+          name: "American Studies",
+          enjoyment: 0,
+          difficulty: 0,
+          load: 0,
+          homework: 0,
+          entries: 0,
+        },
+      },
+    });
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mt-16">
       <h1 className="text-4xl text-classifyBlue font-bold">Classes</h1>
@@ -50,6 +69,7 @@ const ClassCatalog = () => {
               />
             );
           })}
+          <button onClick={handleClick}>click</button>
           {/* // <Card
             //   name={classInfo.name}
             //   image={classInfo.pic}

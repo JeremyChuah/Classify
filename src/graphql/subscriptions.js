@@ -46,6 +46,7 @@ export const onCreateClass = /* GraphQL */ `
       difficulty
       load
       homework
+      entries
       Comments {
         items {
           id
@@ -71,6 +72,7 @@ export const onUpdateClass = /* GraphQL */ `
       difficulty
       load
       homework
+      entries
       Comments {
         items {
           id
@@ -96,6 +98,7 @@ export const onDeleteClass = /* GraphQL */ `
       difficulty
       load
       homework
+      entries
       Comments {
         items {
           id

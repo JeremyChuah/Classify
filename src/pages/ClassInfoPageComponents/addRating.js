@@ -61,19 +61,21 @@ function AddRating(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // await API.graphql({
-    //   query: updateClass,
-    //   variables: {
-    //     input: {
-    //       id: "oncwkcnwokcw",
-    //       enjoyment: Number(values.enjoyment) + Number(props.enjoyment),
-    //       difficulty: Number(values.difficulty) + Number(props.difficulty),
-    //       load: Number(values.load) + Number(props.load),
-    //       homework: Number(values.homework) + Number(props.homework),
-    //     },
-    //   },
-    // });
     if (validate()) {
+      await API.graphql({
+        query: updateClass,
+        variables: {
+          input: {
+            id: props.id,
+            enjoyment: Number(values.enjoyment) + Number(props.enjoyment),
+            difficulty: Number(values.difficulty) + Number(props.difficulty),
+            load: Number(values.load) + Number(props.load),
+            homework: Number(values.homework) + Number(props.homework),
+            entries: Number(props.entries) + 1,
+          },
+        },
+      });
+      setErrors({});
       props.onAddRating();
       setValues([]);
     }
@@ -88,14 +90,14 @@ function AddRating(props) {
           <div className="flex flex-row">
             <Slider
               name="enjoyment"
-              value={values.enjoyment}
+              value={values.enjoyment || 0}
               onChange={handleSliderChange}
               aria-labelledby="input-slider"
               className="mr-5"
             />
             <Input
-              name="difficulty"
-              value={values.enjoyment}
+              name="enjoyment"
+              value={values.enjoyment || 0}
               size="small"
               onChange={handleInputChange}
               {...(errors.enjoyment && {
@@ -109,14 +111,14 @@ function AddRating(props) {
           <div className="flex flex-row">
             <Slider
               name="difficulty"
-              value={values.difficulty}
+              value={values.difficulty || 0}
               onChange={handleSliderChange}
               aria-labelledby="input-slider"
               className="mr-5"
             />
             <Input
               name="difficulty"
-              value={values.difficulty}
+              value={values.difficulty || 0}
               size="small"
               onChange={handleInputChange}
               {...(errors.difficulty && {
@@ -130,14 +132,14 @@ function AddRating(props) {
           <div className="flex flex-row">
             <Slider
               name="load"
-              value={values.load}
+              value={values.load || 0}
               onChange={handleSliderChange}
               aria-labelledby="input-slider"
               className="mr-5"
             />
             <Input
-              name="difficulty"
-              value={values.load}
+              name="load"
+              value={values.load || 0}
               size="small"
               onChange={handleInputChange}
               {...(errors.load && {
@@ -151,14 +153,14 @@ function AddRating(props) {
           <div className="flex flex-row">
             <Slider
               name="homework"
-              value={values.homework}
+              value={values.homework || 0}
               onChange={handleSliderChange}
               aria-labelledby="input-slider"
               className="mr-5"
             />
             <Input
-              name="difficulty"
-              value={values.homework}
+              name="homework"
+              value={values.homework || 0}
               size="small"
               onChange={handleInputChange}
               {...(errors.homework && {

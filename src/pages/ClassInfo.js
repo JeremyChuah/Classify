@@ -81,25 +81,28 @@ function ClassInfo(props) {
           />
         </div>
       </div>
-      <Popup
-        openPopup={openPopup}
-        setOpenPopup={setOpenPopup}
-        title={"Add Rating"}
-      >
-        {classInfo.map((classes) => {
-          return (
+
+      {classInfo.map((classes) => {
+        return (
+          <Popup
+            openPopup={openPopup}
+            setOpenPopup={setOpenPopup}
+            title={"Add Rating"}
+          >
             <AddRating
+              id={classes.id}
               enjoyment={classes.enjoyment}
               difficulty={classes.difficulty}
               load={classes.load}
               homework={classes.homework}
+              entries={classes.entries}
               onAddRating={() => {
                 setOpenPopup(false);
               }}
             />
-          );
-        })}
-      </Popup>
+          </Popup>
+        );
+      })}
     </div>
   );
 }

@@ -896,6 +896,21 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
+          "name" : "entries",
+          "description" : null,
+          "args" : [ ],
+          "type" : {
+            "kind" : "NON_NULL",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "Float",
+              "ofType" : null
+            }
+          },
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        }, {
           "name" : "Comments",
           "description" : null,
           "args" : [ {
@@ -1096,6 +1111,15 @@
           "defaultValue" : null
         }, {
           "name" : "homework",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelFloatInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "entries",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1721,6 +1745,19 @@
             }
           },
           "defaultValue" : null
+        }, {
+          "name" : "entries",
+          "description" : null,
+          "type" : {
+            "kind" : "NON_NULL",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "Float",
+              "ofType" : null
+            }
+          },
+          "defaultValue" : null
         } ],
         "interfaces" : null,
         "enumValues" : null,
@@ -1768,6 +1805,15 @@
           "defaultValue" : null
         }, {
           "name" : "homework",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelFloatInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "entries",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1870,6 +1916,15 @@
           "defaultValue" : null
         }, {
           "name" : "homework",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Float",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "entries",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
