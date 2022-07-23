@@ -1,5 +1,0 @@
-{
-  "AppSyncApiName": "classify",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
-}
