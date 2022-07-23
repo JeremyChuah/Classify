@@ -11,7 +11,7 @@ const classInfoCard = (props) => {
             <h1 className="font-bold text-xl">{props.name}</h1>
             <h2>{props.description}</h2>
             <Link
-              to={`/ClassCatalog/test`}
+              to={`/ClassCatalog/${props.nameClass}`}
               className="hover:font-bold mt-5 text-slate-900 font-semibold"
             >
               Read More

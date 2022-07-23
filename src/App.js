@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Home from "./pages/Home.js";
 import CourseLoad from "./pages/CourseLoad.js";
@@ -11,6 +11,8 @@ import Card from "./pages/classcatalogcomponents/classInfoCard.js";
 import ClassCatalogSpecific from "./pages/classCatalogSpecific";
 import ClassInfo from "./pages/ClassInfo.js";
 import classes from "./pages/classes";
+import { API, graphqlOperation } from "aws-amplify";
+import { listClasses } from "./graphql/queries.js";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -21,7 +23,30 @@ function useScrollToTop() {
 }
 
 function App() {
+  function stringUrl(string) {
+    if (string.includes(" ")) {
+      return string.replaceAll(" ", "%20");
+    } else {
+      return string;
+    }
+  }
+
   useScrollToTop();
+  const [classInfo, setClassInfo] = useState([]);
+
+  useEffect(() => {
+    fetchClass();
+  }, []);
+
+  const fetchClass = async () => {
+    try {
+      const classData = await API.graphql(graphqlOperation(listClasses));
+      const classList = classData.data.listClasses.items;
+      setClassInfo(classList);
+    } catch (e) {
+      console.log("error on fetching classes", e);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -29,7 +54,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CourseLoad" element={<CourseLoad />} />
         <Route path="/ClassCatalog" element={<ClassCatalog />} />
-        <Route path="/ClassCatalog/test" element={<ClassInfo />} />
+        {classInfo.map((classes) => {
+          return (
+            <Route
+              path={`/ClassCatalog/${stringUrl(classes.name)}`}
+              element={<ClassInfo nameClass={classes.name} />}
+            />
+          );
+        })}
       </Routes>
       <Footer />
     </>

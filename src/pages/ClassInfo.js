@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MeterBoard from "./ClassInfoPageComponents/meterBoard";
 import { Link } from "react-router-dom";
 import { v4 } from "uuid";
@@ -8,17 +8,33 @@ import Popup from "./ClassInfoPageComponents/Popup";
 import client from "./ClassInfoPageComponents/meet-with-client.svg";
 import CommentCard from "./ClassInfoPageComponents/commentCard";
 import AddRating from "./ClassInfoPageComponents/addRating";
-import { API } from "aws-amplify";
+import { API, graphqlOperation } from "aws-amplify";
 import { createClass } from "../graphql/mutations.js";
+import { listClasses } from "../graphql/queries.js";
 
 function ClassInfo(props) {
   const [openPopup, setOpenPopup] = useState(false);
+  const [classInfo, setClassInfo] = useState([]);
+
+  useEffect(() => {
+    fetchClass();
+  }, []);
+
+  const fetchClass = async () => {
+    try {
+      const classData = await API.graphql(graphqlOperation(listClasses));
+      const classList = classData.data.listClasses.items;
+      setClassInfo(classList);
+    } catch (e) {
+      console.log("error fetching classes", e);
+    }
+  };
 
   return (
     <div className="mt-10">
       <div className="flex justify-center items-center ">
         <div className="flex flex-col flex-start w-4/5 break-words">
-          <div className="text-4xl font-bold">Science</div>
+          <div className="text-4xl font-bold">{props.nameClass}</div>
           <div>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -70,7 +86,19 @@ function ClassInfo(props) {
         setOpenPopup={setOpenPopup}
         title={"Add Rating"}
       >
-        <AddRating />
+        {classInfo.map((classes) => {
+          return (
+            <AddRating
+              enjoyment={classes.enjoyment}
+              difficulty={classes.difficulty}
+              load={classes.load}
+              homework={classes.homework}
+              onAddRating={() => {
+                setOpenPopup(false);
+              }}
+            />
+          );
+        })}
       </Popup>
     </div>
   );

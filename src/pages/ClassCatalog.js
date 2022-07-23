@@ -17,11 +17,18 @@ const ClassCatalog = () => {
       const classData = await API.graphql(graphqlOperation(listClasses));
       const classList = classData.data.listClasses.items;
       setClassInfo(classList);
-      console.log(classList);
     } catch (e) {
       console.log("error fetching classes", e);
     }
   };
+
+  function stringUrl(string) {
+    if (string.includes(" ")) {
+      return string.replaceAll(" ", "%20");
+    } else {
+      return string;
+    }
+  }
 
   return (
     <div className="flex flex-col justify-center items-center mt-16">
@@ -39,6 +46,7 @@ const ClassCatalog = () => {
                 description={
                   "A College based Calculus course covering calculus 1 and 2"
                 }
+                nameClass={stringUrl(classes.name)}
               />
             );
           })}
