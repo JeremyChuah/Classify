@@ -10,11 +10,13 @@ import CommentCard from "./ClassInfoPageComponents/commentCard";
 import AddRating from "./ClassInfoPageComponents/addRating";
 import { API, graphqlOperation } from "aws-amplify";
 import { createClass } from "../graphql/mutations.js";
-import { listClasses } from "../graphql/queries.js";
+import { listClasses, listComments } from "../graphql/queries.js";
+import AddComment from './ClassInfoPageComponents/AddComment'
 
 function ClassInfo(props) {
   const [openPopup, setOpenPopup] = useState(false);
   const [classInfo, setClassInfo] = useState([]);
+  const [cPopup, setCpopup] = useState(false);
 
   useEffect(() => {
     fetchClass();
@@ -27,6 +29,33 @@ function ClassInfo(props) {
       setClassInfo(classList);
     } catch (e) {
       console.log("error fetching classes", e);
+    }
+  };
+
+  const [comment, setComment] = useState([]);
+
+  useEffect(() => {
+    fetchComments();
+  }, []);
+
+  let filter = {
+    classID: {
+      eq: props.id,
+    },
+  };
+
+  const fetchComments = async () => {
+    try {
+      const comments = await API.graphql({
+        query: listComments,
+        variables: { filter: filter },
+      });
+
+      const commentList = comments.data.listComments.items;
+
+      setComment(commentList);
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -72,11 +101,21 @@ function ClassInfo(props) {
       <div>
         <div className="flex justify-center flex-col items-center mt-20">
           <div className="font-bold text-2xl mb-2">Comment Board</div>
-          <Button variant="outlined" endIcon={<AddIcon />}>
+          <Button variant="outlined" endIcon={<AddIcon />} onClick={() => setCpopup(true)}>
             Add a Comment
           </Button>
         </div>
         <div className="grid xl:grid-cols-5 lg:grid-cols-2 justify-center items-center gap-10 mx-5">
+            {comment.map((comments) => {
+              return (
+                <div>
+                  <CommentCard
+                    subject={comments.subject}
+                    content={comments.content}
+                  />
+                </div>
+              );
+            })}
           <CommentCard
             subject="iojnjon"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
@@ -111,6 +150,16 @@ function ClassInfo(props) {
           </Popup>
         );
       })}
+      <Popup
+            openPopup={cPopup}
+            setOpenPopup={setCpopup}
+            title={"Add Comment"}
+      >
+        <AddComment id={props.id} onAddComment={() => {
+                fetchComments();
+                setCpopup(false);
+              }}></AddComment>
+      </Popup>
     </div>
   );
 }

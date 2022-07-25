@@ -66,6 +66,7 @@ function App() {
                   load={classes.load}
                   homework={classes.homework}
                   entries={classes.entries}
+                  id={classes.id}
                   onAdd={() => {
                     fetchClass();
                   }}
