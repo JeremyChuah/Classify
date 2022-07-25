@@ -18,7 +18,7 @@ function meterBoard(props) {
           <h2 className="font-bold">Class Enjoyment</h2>
         </div>
         <div className="w-4/5 ml-5">
-          <ProgressBar completed={enj} />
+          <ProgressBar completed={enj} bgColor="#1E2F4F" />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -26,7 +26,7 @@ function meterBoard(props) {
           <h2 className="font-bold">Course Difficulty</h2>
         </div>
         <div className="w-4/5 ml-5">
-          <ProgressBar completed={diff} />
+          <ProgressBar completed={diff} bgColor="#1E2F4F" />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -34,7 +34,7 @@ function meterBoard(props) {
           <h2 className="font-bold">Course Load</h2>
         </div>
         <div className="w-4/5 ml-5">
-          <ProgressBar completed={ld} />
+          <ProgressBar completed={ld} bgColor="#1E2F4F" />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -43,7 +43,11 @@ function meterBoard(props) {
           <p>In hours</p>
         </div>
         <div className="w-4/5 ml-5">
-          <ProgressBar customLabel={`${hw} Hours a week`} completed={hw} />
+          <ProgressBar
+            customLabel={`${hw} Hours a week`}
+            completed={hw}
+            bgColor="#1E2F4F"
+          />
         </div>
       </div>
     </div>

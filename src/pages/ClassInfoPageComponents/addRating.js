@@ -9,7 +9,7 @@ import { updateClass } from "../../graphql/mutations";
 const theme = createTheme({
   palette: {
     neutral: {
-      main: "#F4ccac",
+      main: "#1E2F4F",
       contrastText: "#fff",
     },
   },
