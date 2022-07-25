@@ -27,10 +27,10 @@ function navbar() {
           </li>
           <li className="menu-list-item sm:px-7 md:px-16">
             <Link
-              to="CourseLoad"
+              to="/CourseLoad"
               className="hover:text-blue-700 hover:font-semibold"
             >
-              About Us
+              Personal Course Load
             </Link>
           </li>
         </ul>

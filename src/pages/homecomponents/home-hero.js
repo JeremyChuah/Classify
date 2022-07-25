@@ -11,7 +11,7 @@ function homecomponents() {
   return (
     <div className="md:w-full md:flex md:flex-col md:justify-between md:items-center mt-20">
       <div className="md:grid md:grid-cols-2 m-auto">
-        <div className="flex flex-col justify-center items-center w-full px-48 text-center md:text-left">
+        <div className="flex flex-col justify-center items-center w-full md:px-48 sm:px-24 px-3 text-center md:text-left">
           <h1 className="text-4xl font-bold text-classifyBlue lg:w-full md:w-72 mb-5 lg:mb-2 w-96">
             Search for Class
           </h1>
@@ -19,7 +19,7 @@ function homecomponents() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incidid
           </p>
-          <div className="sm:w-full p-2 flex flex-row sm:justify-between rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10 mb-4">
+          <div className="sm:w-full w-full p-2 flex flex-row sm:justify-between rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10 mb-4">
             <input
               type="text"
               placeholder="Enter Class Name"
