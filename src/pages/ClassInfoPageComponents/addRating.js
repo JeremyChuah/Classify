@@ -36,7 +36,7 @@ function AddRating(props) {
     temp.enjoyment = values.enjoyment > 0 ? "" : "Please Enter a Rating";
     temp.difficulty = values.difficulty > 0 ? "" : "Please Enter a Rating";
     temp.load = values.load > 0 ? "" : "Please Enter a Rating";
-    temp.homework = values.homework > 0 ? "" : "Please Enter a Number";
+    temp.homework = values.homework >= 0 ? "" : "Please Enter a Number";
     setErrors({
       ...temp,
     });
@@ -75,6 +75,8 @@ function AddRating(props) {
           },
         },
       });
+      console.log(props.enjoyment);
+      console.log(values);
       setErrors({});
       props.onAddRating();
       setValues([]);
@@ -95,15 +97,16 @@ function AddRating(props) {
               aria-labelledby="input-slider"
               className="mr-5"
             />
-            <Input
+            {/* <Input
               name="enjoyment"
-              value={values.enjoyment || 0}
+              value={values.enjoyment}
               size="small"
               onChange={handleInputChange}
               {...(errors.enjoyment && {
                 error: true,
               })}
-            />
+            /> */}
+            <div>{values.enjoyment}</div>
           </div>
         </div>
         <div>
@@ -116,7 +119,7 @@ function AddRating(props) {
               aria-labelledby="input-slider"
               className="mr-5"
             />
-            <Input
+            {/* <Input
               name="difficulty"
               value={values.difficulty || 0}
               size="small"
@@ -124,7 +127,8 @@ function AddRating(props) {
               {...(errors.difficulty && {
                 error: true,
               })}
-            />
+            /> */}
+            <div>{values.difficulty}</div>
           </div>
         </div>
         <div>
@@ -137,7 +141,7 @@ function AddRating(props) {
               aria-labelledby="input-slider"
               className="mr-5"
             />
-            <Input
+            {/* <Input
               name="load"
               value={values.load || 0}
               size="small"
@@ -145,7 +149,8 @@ function AddRating(props) {
               {...(errors.load && {
                 error: true,
               })}
-            />
+            /> */}
+            <div>{values.load}</div>
           </div>
         </div>
         <div className="mb-3">
@@ -158,7 +163,7 @@ function AddRating(props) {
               aria-labelledby="input-slider"
               className="mr-5"
             />
-            <Input
+            {/* <Input
               name="homework"
               value={values.homework || 0}
               size="small"
@@ -166,7 +171,8 @@ function AddRating(props) {
               {...(errors.homework && {
                 error: true,
               })}
-            />
+            /> */}
+            <div>{values.homework}</div>
           </div>
         </div>
         <ThemeProvider theme={theme}>

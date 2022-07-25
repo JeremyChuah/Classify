@@ -97,6 +97,7 @@ function ClassInfo(props) {
               homework={classes.homework}
               entries={classes.entries}
               onAddRating={() => {
+                fetchClass();
                 setOpenPopup(false);
               }}
             />
