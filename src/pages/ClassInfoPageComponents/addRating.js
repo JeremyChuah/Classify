@@ -33,9 +33,9 @@ function AddRating(props) {
 
   const validate = () => {
     let temp = {};
-    temp.enjoyment = values.enjoyment > 0 ? "" : "Please Enter a Rating";
-    temp.difficulty = values.difficulty > 0 ? "" : "Please Enter a Rating";
-    temp.load = values.load > 0 ? "" : "Please Enter a Rating";
+    temp.enjoyment = values.enjoyment >= 0 ? "" : "Please Enter a Rating";
+    temp.difficulty = values.difficulty >= 0 ? "" : "Please Enter a Rating";
+    temp.load = values.load >= 0 ? "" : "Please Enter a Rating";
     temp.homework = values.homework >= 0 ? "" : "Please Enter a Number";
     setErrors({
       ...temp,
@@ -86,7 +86,6 @@ function AddRating(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <p className="font-bold mb-5">Enter Value over 0</p>
         <div>
           <p>Class Enjoyment</p>
           <div className="flex flex-row">
@@ -154,7 +153,7 @@ function AddRating(props) {
           </div>
         </div>
         <div className="mb-3">
-          <p>Homework(hours)</p>
+          <p>Homework (Hours)</p>
           <div className="flex flex-row">
             <Slider
               name="homework"
