@@ -58,7 +58,19 @@ function App() {
           return (
             <Route
               path={`/ClassCatalog/${stringUrl(classes.name)}`}
-              element={<ClassInfo nameClass={classes.name} />}
+              element={
+                <ClassInfo
+                  nameClass={classes.name}
+                  enjoyment={classes.enjoyment}
+                  difficulty={classes.difficulty}
+                  load={classes.load}
+                  homework={classes.homework}
+                  entries={classes.entries}
+                  onAdd={() => {
+                    fetchClass();
+                  }}
+                />
+              }
             />
           );
         })}

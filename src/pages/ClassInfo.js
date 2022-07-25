@@ -46,7 +46,13 @@ function ClassInfo(props) {
       <div>
         <div className="flex flex-row justify-center items-center mt-20 px-10">
           <div className="w-3/5">
-            <MeterBoard />
+            <MeterBoard
+              entries={props.entries}
+              enjoyment={props.enjoyment}
+              difficulty={props.difficulty}
+              load={props.load}
+              homework={props.homework}
+            />
             <div className="mt-5 flex justify-center">
               <Button
                 variant="outlined"
@@ -70,7 +76,7 @@ function ClassInfo(props) {
             Add a Comment
           </Button>
         </div>
-        <div className="grid grid-cols-5 justify-center items-center gap-10 mx-5">
+        <div className="grid xl:grid-cols-5 lg:grid-cols-2 justify-center items-center gap-10 mx-5">
           <CommentCard
             subject="iojnjon"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
@@ -99,6 +105,7 @@ function ClassInfo(props) {
               onAddRating={() => {
                 fetchClass();
                 setOpenPopup(false);
+                props.onAdd();
               }}
             />
           </Popup>
