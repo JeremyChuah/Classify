@@ -14,7 +14,6 @@ import { listClasses, listComments } from "../graphql/queries.js";
 import AddComment from "./ClassInfoPageComponents/AddComment";
 
 function ClassInfo(props) {
-  const [openPopup, setOpenPopup] = useState(false);
   const [classInfo, setClassInfo] = useState([]);
   const [cPopup, setCpopup] = useState(false);
 
@@ -76,13 +75,18 @@ function ClassInfo(props) {
         <div className="flex flex-row justify-center items-center mt-20 px-10">
           <div className="w-3/5">
             <MeterBoard
+              id={props.id}
               entries={props.entries}
               enjoyment={props.enjoyment}
               difficulty={props.difficulty}
               load={props.load}
               homework={props.homework}
+              onAddRating={() => {
+                fetchClass();
+                props.onAdd();
+              }}
             />
-            <div className="mt-5 flex justify-center">
+            {/* <div className="mt-5 flex justify-center">
               <Button
                 variant="outlined"
                 endIcon={<AddIcon />}
@@ -90,7 +94,7 @@ function ClassInfo(props) {
               >
                 Add your own ratings
               </Button>
-            </div>
+            </div> */}
           </div>
           <div>
             <img src={client} className="hidden lg:block" />
@@ -123,7 +127,7 @@ function ClassInfo(props) {
         </div>
       </div>
 
-      {classInfo.map((classes) => {
+      {/* {classInfo.map((classes) => {
         return (
           <Popup
             openPopup={openPopup}
@@ -145,7 +149,7 @@ function ClassInfo(props) {
             />
           </Popup>
         );
-      })}
+      })} */}
       <Popup openPopup={cPopup} setOpenPopup={setCpopup} title={"Add Comment"}>
         <AddComment
           id={props.id}

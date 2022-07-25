@@ -38,7 +38,7 @@ const ClassCatalog = () => {
       variables: {
         input: {
           id: v4(),
-          name: "American Studies",
+          name: "American Studies 2",
           enjoyment: 0,
           difficulty: 0,
           load: 0,
@@ -56,7 +56,7 @@ const ClassCatalog = () => {
         A catalog of all the classes that we track and keep information on.
       </h2>
       <div className="flex justify-center items-center px-20">
-        <div className="lg:grid grid-cols-3 gap-7">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {classesInfo.map((classes) => {
             return (
               <Card
