@@ -33,9 +33,9 @@ function AddRating(props) {
 
   const validate = () => {
     let temp = {};
-    temp.enjoyment = values.enjoyment > 0 ? "" : "Please Enter a Rating";
-    temp.difficulty = values.difficulty > 0 ? "" : "Please Enter a Rating";
-    temp.load = values.load > 0 ? "" : "Please Enter a Rating";
+    temp.enjoyment = values.enjoyment >= 0 ? "" : "Please Enter a Rating";
+    temp.difficulty = values.difficulty >= 0 ? "" : "Please Enter a Rating";
+    temp.load = values.load >= 0 ? "" : "Please Enter a Rating";
     temp.homework = values.homework >= 0 ? "" : "Please Enter a Number";
     setErrors({
       ...temp,
