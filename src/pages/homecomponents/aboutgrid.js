@@ -13,22 +13,28 @@ const aboutgrid = (props) => {
         <Aboutcard
           image={Attendance}
           name={"Helping Kids Make the right decisions"}
-          description={"iodfniovjenojvnojvnove"}
+          description={
+            "We want to assist in choosing the best classes for students."
+          }
         />
         <Aboutcard
           image={computer}
-          name={"Helping Kids Make the right decisions"}
-          description={"iodfniovjenojvnojvnove"}
+          name={"Compatibility with all devices"}
+          description={"Allows all students to use the platform."}
         />
         <Aboutcard
           image={distort}
-          name={"Helping Kids Make the right decisions"}
-          description={"iodfniovjenojvnojvnove"}
+          name={"Large sample size"}
+          description={
+            "Allowing numerous opinions gives way to more accurate data about each class."
+          }
         />
         <Aboutcard
           image={cloud}
-          name={"Helping Kids Make the right decisions"}
-          description={"iodfniovjenojvnojvnove"}
+          name={"open source"}
+          description={
+            "allowing students to voice opinions and get more information about the class."
+          }
         />
       </div>
     </div>

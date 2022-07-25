@@ -24,27 +24,27 @@ function classgrid() {
           <Classcard
             image={Math}
             name="Math"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            description="Applications of mathematics in problem solving, probability, statistics, geometry, and calculus."
           />
           <Classcard
             image={Science}
             name="Science"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            description="Study the basics of life, genetics, microbiology, plant science, animal science, evolution, and chemistry."
           />
           <Classcard
             image={History}
             name="History"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            description="Explores important chapters of the human past from the earliest civilizations through the 15th century."
           />
           <Classcard
             image={English}
             name="English"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            description="The development of critical reading and writing skills and the application in real world context."
           />
           <Classcard
             image={Geography}
             name="electives"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid"
+            description="Classes that pertain to career readiness or the arts, meant to be more enjoyable and to cater to your strengths."
           />
         </div>
       </div>

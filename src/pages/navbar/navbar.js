@@ -9,7 +9,9 @@ function navbar() {
     <div className="flex flex-row w-full justfy-center items-center mt-10">
       <div className=" sm:w-4/5 w-72 m-auto items-center flex flex-row justify-between shadow-2xl rounded-xl">
         <div>
-          <img src={classifyLogo} />
+          <Link to="/">
+            <img src={classifyLogo} />
+          </Link>
         </div>
         <ul className="menu-list sm:flex sm:flex-row mr-5 sm:mr-0">
           <li className="menu-list-item sm:px-7 md:px-16">

@@ -16,8 +16,8 @@ function homecomponents() {
             Search for Class
           </h1>
           <p className="lg:w-full md:w-72 w-96">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incidid
+            Search for any class of your choosing. From Math classes to English
+            classes, classify has you covered!
           </p>
           <div className="sm:w-full w-full p-2 flex flex-row sm:justify-between rounded-md shadow-lg border-0 lg:w-full md:w-72 outline-0 mt-10 mb-4">
             <input
