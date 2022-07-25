@@ -59,11 +59,11 @@ function AddComment(props) {
           },
         },
       });
+      props.onAddComment();
       setValues(initialValues);
       setErrors({});
     }
   };
-
 
   return (
     <form onSubmit={handleSubmit}>
