@@ -86,7 +86,6 @@ function AddRating(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <p className="font-bold mb-5">Enter Value over 0</p>
         <div>
           <p>Class Enjoyment</p>
           <div className="flex flex-row">
@@ -154,7 +153,7 @@ function AddRating(props) {
           </div>
         </div>
         <div className="mb-3">
-          <p>Homework(hours)</p>
+          <p>Homework (Hours)</p>
           <div className="flex flex-row">
             <Slider
               name="homework"
