@@ -63,12 +63,7 @@ function ClassInfo(props) {
       <div className="flex justify-center items-center ">
         <div className="flex flex-col flex-start w-4/5 break-words">
           <div className="text-4xl font-bold">{props.nameClass}</div>
-          <div>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
-          </div>
+          <div>{props.description}</div>
         </div>
       </div>
       <div>
@@ -113,7 +108,7 @@ function ClassInfo(props) {
             Add a Comment
           </Button>
         </div>
-        <div className="grid xl:grid-cols-5 lg:grid-cols-2 justify-center items-center gap-10 mx-5">
+        <div className="lg:grid xl:grid-cols-4 lg:grid-cols-2 justify-center items-center content-center gap-10 md:px-5 w-full">
           {comment.map((comments) => {
             return (
               <div>

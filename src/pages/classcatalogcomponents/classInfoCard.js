@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const classInfoCard = (props) => {
   return (
     <div className="flex items-center mt-5 h-auto">
-      <div className="bg-white rounded-lg shadow-lg flex items-center text-center flex-col p-10 w-full xl:h-56 h-auto">
+      <div className="bg-white rounded-lg shadow-lg flex items-center text-center flex-col p-5 w-full xl:h-48 h-auto">
         <div className="flex xl:flex-row flex-col items-center">
           <img src={props.image} className="xl:h-28 h-24" />
           <div className="flex flex-col items-center xl:ml-10 break-normal">

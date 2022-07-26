@@ -45,9 +45,7 @@ const ClassCatalog = () => {
               <Card
                 name={classes.name}
                 image={mathIcon}
-                description={
-                  "A College based Calculus course covering calculus 1 and 2"
-                }
+                description={classes.description}
                 nameClass={stringUrl(classes.name)}
               />
             );
