@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "classify",
+  "projectName": "Classify",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
