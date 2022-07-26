@@ -91,9 +91,7 @@ function ClassInfo(props) {
               </Button>
             </div> */}
           </div>
-          <div>
-            <img src={client} className="hidden lg:block" />
-          </div>
+          <div>{/* <img src={client} className="hidden lg:block" /> */}</div>
         </div>
       </div>
 
