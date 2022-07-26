@@ -17,8 +17,8 @@ function classgrid() {
               Classes We Offer
             </div>
             <div className="md:text-left text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incidid
+              We provide in-depth and analytical descriptions for the essential
+              core class subjects and electives
             </div>
           </div>
           <Classcard

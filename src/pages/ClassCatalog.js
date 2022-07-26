@@ -44,6 +44,9 @@ const ClassCatalog = () => {
           load: 0,
           homework: 0,
           entries: 0,
+          description:
+            "Hybrid Learning enviornemnt between English and History",
+          subject: "History",
         },
       },
     });
@@ -56,7 +59,7 @@ const ClassCatalog = () => {
         A catalog of all the classes that we track and keep information on.
       </h2>
       <div className="flex justify-center items-center px-20">
-        <div className="lg:grid grid-cols-3 gap-7">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {classesInfo.map((classes) => {
             return (
               <Card

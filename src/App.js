@@ -52,7 +52,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/CourseLoad" element={<CourseLoad />} />
+        <Route path="/CourseLoad" element={<CourseLoad data={classInfo} />} />
         <Route path="/ClassCatalog" element={<ClassCatalog />} />
         {classInfo.map((classes) => {
           return (

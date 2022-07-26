@@ -16,7 +16,7 @@ const initialValues = {
 const theme = createTheme({
   palette: {
     neutral: {
-      main: "#F4ccac",
+      main: "#1E2F4F",
       contrastText: "#fff",
     },
   },
@@ -37,7 +37,7 @@ function AddComment(props) {
   const validate = () => {
     let temp = {};
     temp.subject = values.subject ? "" : "This Field is Required.";
-    temp.content = values.content ? "" : "This Field is Required.";
+    temp.content = values.content ? "" : "Within character limit please";
     setErrors({
       ...temp,
     });
@@ -85,13 +85,20 @@ function AddComment(props) {
           label="Comment Content"
           type="text"
           name="content"
+          size="medium"
           style={{ margin: "1rem" }}
           value={values.content}
+          multiline="true"
+          rows={8}
           onChange={handleInputChange}
           {...(errors.content && {
             error: true,
             helperText: errors.content,
           })}
+          inputProps={{
+            maxlength: 275,
+          }}
+          helperText={`${values.content.length}/${275}`}
         />
         <br />
         <ThemeProvider theme={theme}>

@@ -6,7 +6,11 @@
     "gqlSchemaPath": "C:\\Users\\shang\\OneDrive\\Documents\\GitHub\\Classify\\amplify\\backend\\api\\classify\\schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-07-26T02:57:48.580Z",
+      "keyDescription": ""
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
   }
 }
