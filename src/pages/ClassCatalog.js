@@ -32,26 +32,6 @@ const ClassCatalog = () => {
     }
   }
 
-  const handleClick = async () => {
-    await API.graphql({
-      query: createClass,
-      variables: {
-        input: {
-          id: v4(),
-          name: "American Studies",
-          enjoyment: 0,
-          difficulty: 0,
-          load: 0,
-          homework: 0,
-          entries: 0,
-          description:
-            "Hybrid Learning enviornemnt between English and History",
-          subject: "History",
-        },
-      },
-    });
-  };
-
   return (
     <div className="flex flex-col justify-center items-center mt-16">
       <h1 className="text-4xl text-classifyBlue font-bold">Classes</h1>
@@ -72,7 +52,7 @@ const ClassCatalog = () => {
               />
             );
           })}
-          <button onClick={handleClick}>click</button>
+
           {/* // <Card
             //   name={classInfo.name}
             //   image={classInfo.pic}
