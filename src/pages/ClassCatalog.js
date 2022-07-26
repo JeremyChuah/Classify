@@ -38,12 +38,15 @@ const ClassCatalog = () => {
       variables: {
         input: {
           id: v4(),
-          name: "American Studies 2",
+          name: "American Studies",
           enjoyment: 0,
           difficulty: 0,
           load: 0,
           homework: 0,
           entries: 0,
+          description:
+            "Hybrid Learning enviornemnt between English and History",
+          subject: "History",
         },
       },
     });
