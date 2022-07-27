@@ -13,6 +13,7 @@ import ClassInfo from "./pages/ClassInfo.js";
 import classes from "./pages/classes";
 import { API, graphqlOperation } from "aws-amplify";
 import { listClasses } from "./graphql/queries.js";
+import About from "./pages/About";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -54,6 +55,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CourseLoad" element={<CourseLoad data={classInfo} />} />
         <Route path="/ClassCatalog" element={<ClassCatalog />} />
+        <Route path="/About" element={<><div className="row"><About /></div></>} />
         {classInfo.map((classes) => {
           return (
             <Route

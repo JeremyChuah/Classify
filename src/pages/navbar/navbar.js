@@ -58,6 +58,14 @@ function Navbar() {
               Personal Course Load
             </Link>
           </li>
+          <li className="items sm:px-7 md:px-16">
+            <Link
+              to="/About"
+              className="hover:text-blue-700 hover:font-semibold"
+            >
+              About Us
+            </Link>
+          </li>
         </ul>)}
         <button onClick={toggleNav} className="btn">☰</button>
       </div>
