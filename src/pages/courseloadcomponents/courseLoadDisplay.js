@@ -15,7 +15,13 @@ function CourseLoadDisplay(props) {
             <h2 className="font-bold">Class Enjoyment</h2>
           </div>
           <div className="md:w-4/5 w-full ml-5">
-            <ProgressBar completed={props.enj || 0} defa bgColor="#1E2F4F" />
+            <ProgressBar
+              completed={props.enj || 0}
+              defa
+              bgColor="#1E2F4F"
+              maxCompleted={5}
+              customLabel={`${props.enj}`}
+            />
           </div>
         </div>
         <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -23,7 +29,12 @@ function CourseLoadDisplay(props) {
             <h2 className="font-bold">Course Difficulty</h2>
           </div>
           <div className="md:w-4/5 w-full ml-5">
-            <ProgressBar completed={props.diff || 0} bgColor="#1E2F4F" />
+            <ProgressBar
+              completed={props.diff || 0}
+              bgColor="#1E2F4F"
+              maxCompleted={5}
+              customLabel={`${props.diff}`}
+            />
           </div>
         </div>
         <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -31,7 +42,12 @@ function CourseLoadDisplay(props) {
             <h2 className="font-bold">Course Load</h2>
           </div>
           <div className="md:w-4/5 w-full ml-5">
-            <ProgressBar completed={props.load || 0} bgColor="#1E2F4F" />
+            <ProgressBar
+              completed={props.load || 0}
+              bgColor="#1E2F4F"
+              maxCompleted={5}
+              customLabel={`${props.load}`}
+            />
           </div>
         </div>
         <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">

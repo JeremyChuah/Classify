@@ -44,21 +44,25 @@ function CourseLoad({ data }) {
       };
       temp.map((classesInf) => {
         tempAvg.enj =
-          Math.round(classesInf.enjoyment / classesInf.entries) + tempAvg.enj;
+          Math.round((classesInf.enjoyment / classesInf.entries) * 10) / 10 +
+          tempAvg.enj;
         tempAvg.diff =
-          Math.round(classesInf.difficulty / classesInf.entries) + tempAvg.diff;
+          Math.round((classesInf.difficulty / classesInf.entries) * 10) / 10 +
+          tempAvg.diff;
         tempAvg.load =
-          Math.round(classesInf.load / classesInf.entries) + tempAvg.load;
+          Math.round((classesInf.load / classesInf.entries) * 10) / 10 +
+          tempAvg.load;
         tempAvg.hw =
-          Math.round(classesInf.homework / classesInf.entries) + tempAvg.hw;
+          Math.round((classesInf.homework / classesInf.entries) * 10) / 10 +
+          tempAvg.hw;
       });
 
       console.log(tempAvg);
 
-      tempAvg.enj = Math.round(tempAvg.enj / temp.length);
-      tempAvg.diff = Math.round(tempAvg.diff / temp.length);
-      tempAvg.load = Math.round(tempAvg.load / temp.length);
-      tempAvg.hw = Math.round(tempAvg.hw / temp.length);
+      tempAvg.enj = Math.round((tempAvg.enj / temp.length) * 10) / 10;
+      tempAvg.diff = Math.round((tempAvg.diff / temp.length) * 10) / 10;
+      tempAvg.load = Math.round((tempAvg.load / temp.length) * 10) / 10;
+      tempAvg.hw = Math.round((tempAvg.hw / temp.length) * 10) / 10;
       setAvgRatings(tempAvg);
       console.log(tempAvg);
     }

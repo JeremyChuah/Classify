@@ -6,10 +6,10 @@ import Popup from "./Popup";
 import AddRating from "./addRating";
 
 function MeterBoard(props) {
-  const enj = Math.round(props.enjoyment / props.entries);
-  const diff = Math.round(props.difficulty / props.entries);
-  const ld = Math.round(props.load / props.entries);
-  const hw = Math.round(props.homework / props.entries);
+  const enj = Math.round((props.enjoyment / props.entries) * 10) / 10;
+  const diff = Math.round((props.difficulty / props.entries) * 10) / 10;
+  const ld = Math.round((props.load / props.entries) * 10) / 10;
+  const hw = Math.round((props.homework / props.entries) * 10) / 10;
 
   const [openPopup, setOpenPopup] = useState(false);
 
@@ -24,7 +24,12 @@ function MeterBoard(props) {
           <h2 className="font-bold">Class Enjoyment</h2>
         </div>
         <div className="md:w-4/5 w-full ml-5">
-          <ProgressBar completed={enj || 0} bgColor="#1E2F4F" />
+          <ProgressBar
+            completed={enj || 0}
+            bgColor="#1E2F4F"
+            maxCompleted={5}
+            customLabel={`${enj}`}
+          />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -32,7 +37,12 @@ function MeterBoard(props) {
           <h2 className="font-bold">Course Difficulty</h2>
         </div>
         <div className="md:w-4/5 w-full ml-5">
-          <ProgressBar completed={diff || 0} bgColor="#1E2F4F" />
+          <ProgressBar
+            completed={diff || 0}
+            bgColor="#1E2F4F"
+            maxCompleted={5}
+            customLabel={`${diff}`}
+          />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
@@ -40,7 +50,12 @@ function MeterBoard(props) {
           <h2 className="font-bold">Course Load</h2>
         </div>
         <div className="md:w-4/5 w-full ml-5">
-          <ProgressBar completed={ld || 0} bgColor="#1E2F4F" />
+          <ProgressBar
+            customLabel={`${ld}`}
+            completed={ld || 0}
+            bgColor="#1E2F4F"
+            maxCompleted={5}
+          />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">

@@ -13,7 +13,7 @@ function classgrid() {
       <div className="flex flex-col justify-center items-center mx-auto mt-10 w-4/5 z-10 content">
         <div className="md:grid md:grid-cols-3 justify-center items-center gap-7">
           <div className="flex flex-col md:justify-self-start md:items-start">
-            <div className="text-2xl text-classifyBlue font-bold">
+            <div className="text-2xl text-classifyBlue font-bold text-center">
               Classes We Offer
             </div>
             <div className="md:text-left text-center">

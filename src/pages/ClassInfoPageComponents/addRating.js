@@ -90,6 +90,7 @@ function AddRating(props) {
           <p>Class Enjoyment</p>
           <div className="flex flex-row">
             <Slider
+              max={5}
               name="enjoyment"
               value={values.enjoyment || 0}
               onChange={handleSliderChange}
@@ -112,6 +113,7 @@ function AddRating(props) {
           <p>Course Difficulty</p>
           <div className="flex flex-row">
             <Slider
+              max={5}
               name="difficulty"
               value={values.difficulty || 0}
               onChange={handleSliderChange}
@@ -134,6 +136,7 @@ function AddRating(props) {
           <p>Course Load</p>
           <div className="flex flex-row">
             <Slider
+              max={5}
               name="load"
               value={values.load || 0}
               onChange={handleSliderChange}
@@ -156,6 +159,7 @@ function AddRating(props) {
           <p>Homework (Hours)</p>
           <div className="flex flex-row">
             <Slider
+              max={10}
               name="homework"
               value={values.homework || 0}
               onChange={handleSliderChange}
