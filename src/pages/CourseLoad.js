@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+
 import Select from "react-select";
-import { API, graphqlOperation } from "aws-amplify";
-import { listClasses } from "../graphql/queries";
+
 import CourseLoadDisplay from "./courseloadcomponents/courseLoadDisplay";
 
 const options = [

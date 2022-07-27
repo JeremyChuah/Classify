@@ -42,7 +42,7 @@ function Homecomponents() {
           </button> */}
         </div>
         <div className="lg:mr-24">
-          <img src={icon} />
+          <img src={icon} alt="home hero icon" />
         </div>
       </div>
     </div>
