@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import OurTeamProfile from "./OurTeamProfile";
-import Jay from "./square.jpeg";
+import Jay from "./square.jpg";
 import Jeremy from "./1650497222877.jpg";
-import Faizan from "./sqq.jpg";
+import Faizan from "./sqqqq.jpg";
 import Jad from "./sq2.png";
 
 var profiles = [
     {
      img: Jad,   
      name: 'Jad Baziam',
-     title: 'Business Lead',
+     title: 'Project Lead/Business Lead',
     },
    
     {
      img: Jeremy,   
      name: 'Jeremy Chuah',
-     title: 'VP of Engineering & Product',
+     title: 'Lead Engineering & Product',
     },
    
     {
@@ -26,7 +26,7 @@ var profiles = [
     {
      img: Faizan,   
      name: 'Faizan Kalam',
-     title: 'Marketing Lead',
+     title: 'Chief Marketing Officer',
     },
    
    ];
