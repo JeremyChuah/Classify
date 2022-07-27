@@ -31,7 +31,7 @@ const aboutgrid = (props) => {
         />
         <Aboutcard
           image={cloud}
-          name={"open source"}
+          name={"Open Source"}
           description={
             "allowing students to voice opinions and get more information about the class."
           }

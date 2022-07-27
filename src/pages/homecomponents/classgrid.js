@@ -43,7 +43,7 @@ function classgrid() {
           />
           <Classcard
             image={Geography}
-            name="electives"
+            name="Electives"
             description="Classes that pertain to career readiness or the arts, meant to be more enjoyable and to cater to your strengths."
           />
         </div>

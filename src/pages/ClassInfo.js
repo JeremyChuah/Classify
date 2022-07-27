@@ -68,7 +68,7 @@ function ClassInfo(props) {
       </div>
       <div>
         <div className="flex flex-row justify-center items-center mt-20 px-10">
-          <div className="md:w-3/5">
+          <div className="md:w-4/5">
             <MeterBoard
               id={props.id}
               entries={props.entries}

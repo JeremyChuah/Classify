@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const classInfoCard = (props) => {
   return (
-    <div className="flex items-center mt-5 h-auto">
-      <div className="bg-white rounded-lg shadow-lg flex items-center text-center flex-col p-5 w-full xl:h-48 h-auto">
+    <div className="flex justify-center items-center mt-5 h-auto">
+      <div className="bg-white rounded-lg shadow-lg justify-center flex items-center text-center flex-col p-5 w-full h-full">
         <div className="flex xl:flex-row flex-col items-center">
-          <img src={props.image} className="xl:h-28 h-24" />
+          <img src={props.image} className="2xl:h-24 h-20" />
           <div className="flex flex-col items-center xl:ml-10 break-normal">
             <h1 className="font-bold text-xl">{props.name}</h1>
             <h2>{props.description}</h2>

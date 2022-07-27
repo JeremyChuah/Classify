@@ -6,9 +6,13 @@ import { listClasses } from "../graphql/queries";
 import CourseLoadDisplay from "./courseloadcomponents/courseLoadDisplay";
 
 const options = [
-  { value: "American Studies", label: "American Studies" },
-  { value: "AP Biology", label: "AP Biology" },
-  { value: "AP Enviornmental Science", label: "AP Enviornmental Science" },
+  { value: "AP American History", label: "AP American History" },
+  { value: "AP World History: Modern", label: "AP World History: Modern" },
+  {
+    value: "AP Language and Composition",
+    label: "AP Language and Composition",
+  },
+  { value: "AP Environmental Science", label: "AP Environmental Science" },
 ];
 
 function CourseLoad({ data }) {
@@ -40,19 +44,22 @@ function CourseLoad({ data }) {
         hw: 0,
       };
       temp.map((classesInf) => {
-        tempAvg.enj = Math.round(
-          (classesInf.enjoyment + tempAvg.enj) / classesInf.entries
-        );
-        tempAvg.diff = Math.round(
-          (classesInf.difficulty + tempAvg.diff) / classesInf.entries
-        );
-        tempAvg.load = Math.round(
-          (classesInf.load + tempAvg.load) / classesInf.entries
-        );
-        tempAvg.hw = Math.round(
-          (classesInf.homework + tempAvg.hw) / classesInf.entries
-        );
+        tempAvg.enj =
+          Math.round(classesInf.enjoyment / classesInf.entries) + tempAvg.enj;
+        tempAvg.diff =
+          Math.round(classesInf.difficulty / classesInf.entries) + tempAvg.diff;
+        tempAvg.load =
+          Math.round(classesInf.load / classesInf.entries) + tempAvg.load;
+        tempAvg.hw =
+          Math.round(classesInf.homework / classesInf.entries) + tempAvg.hw;
       });
+
+      console.log(tempAvg);
+
+      tempAvg.enj = Math.round(tempAvg.enj / temp.length);
+      tempAvg.diff = Math.round(tempAvg.diff / temp.length);
+      tempAvg.load = Math.round(tempAvg.load / temp.length);
+      tempAvg.hw = Math.round(tempAvg.hw / temp.length);
       setAvgRatings(tempAvg);
       console.log(tempAvg);
     }
@@ -75,10 +82,10 @@ function CourseLoad({ data }) {
       <div className="mt-10 flex flex-row justify-center items-center">
         <div className="w-4/5">
           <CourseLoadDisplay
-            enj={avgRatings.enj / ratings.length}
-            diff={avgRatings.diff / ratings.length}
-            load={avgRatings.load / ratings.length}
-            hw={avgRatings.hw / ratings.length}
+            enj={avgRatings.enj}
+            diff={avgRatings.diff}
+            load={avgRatings.load}
+            hw={avgRatings.hw}
           />
         </div>
       </div>

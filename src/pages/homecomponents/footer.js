@@ -53,7 +53,11 @@ const footer = () => {
                       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>
                   </a>
-                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                  <a
+                    class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700"
+                    href="https://twitter.com/ClassifyEDU"
+                    target="_blank"
+                  >
                     <svg
                       fill="currentColor"
                       stroke-linecap="round"
