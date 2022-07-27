@@ -26,7 +26,7 @@ var profiles = [
     {
      img: Faizan,   
      name: 'Faizan Kalam',
-     title: 'Chief Marketing Officer',
+     title: 'Marketing Lead',
     },
    
    ];
