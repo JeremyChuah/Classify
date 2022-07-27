@@ -10,6 +10,19 @@ import scienceIcon from "./homecomponents/cardimages/science.svg";
 import historyIcon from "./homecomponents/cardimages/history.svg";
 import geographyIcon from "./homecomponents/cardimages/geography.svg";
 import englishIcon from "./homecomponents/cardimages/english.svg";
+import Select from "react-select";
+
+const options = [
+  { value: "All", text: "All" },
+  { value: "History", text: "History" },
+  { value: "English", text: "English" },
+  {
+    value: "Science",
+    text: "Science",
+  },
+  { value: "Math", text: "Math" },
+  { value: "Elective", text: "Elective" },
+];
 
 const ClassCatalog = () => {
   const [classesInfo, setClassInfo] = useState([]);
@@ -36,6 +49,38 @@ const ClassCatalog = () => {
     }
   }
 
+  const fetchClassbySubject = async (selSub) => {
+    try {
+      const classSubjectData = await API.graphql({
+        query: listClasses,
+        variables: {
+          filter: {
+            subject: {
+              eq: selSub,
+            },
+          },
+        },
+      });
+
+      const classSubjectList = classSubjectData.data.listClasses.items;
+      setClassInfo(classSubjectList);
+    } catch (e) {
+      console.log("error fteching by subject", e);
+    }
+  };
+
+  const [selected, setSelected] = useState(options[0].value);
+
+  const handleChange = async (event) => {
+    console.log(event.target.value);
+    setSelected(event.target.value);
+    if (event.target.value === "All") {
+      fetchClass();
+    } else {
+      fetchClassbySubject(event.target.value);
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mt-16">
       <h1 className="text-4xl text-classifyBlue font-bold">Classes</h1>
@@ -43,47 +88,94 @@ const ClassCatalog = () => {
         A catalog of all the classes that we track and keep information on.
       </h2>
       <h1 className="mt-6 pr-4 font-semibold text-lg">Key</h1>
-      <div className="grid grid-cols-2 gap-3 rounded-md shadow-lg p-3 lg:flex lg:flex-row lg:justify-between bg-gray-100">
-        <div className="flex flex-row lg:justify-center items-center px-3">
-          <img src={mathIcon} className="h-10 w-10 mr-2" />
-          <p>- Math Class</p>
+      <div>
+        <div className="grid grid-cols-2 gap-3 rounded-md shadow-lg p-3 lg:flex lg:flex-row lg:justify-between bg-gray-100">
+          <div className="flex flex-row lg:justify-center items-center px-3">
+            <img src={mathIcon} className="h-10 w-10 mr-2" />
+            <p>- Math Class</p>
+          </div>
+          <div className="flex flex-row justify-center items-center px-3">
+            <img src={scienceIcon} className="h-10 w-10 mr-2" />
+            <p>- Science Class</p>
+          </div>
+          <div className="flex flex-row justify-center items-center px-3">
+            <img src={historyIcon} className="h-10 w-10 mr-2" />
+            <p>- History Class</p>
+          </div>
+          <div className="flex flex-row justify-center items-center px-3">
+            <img src={englishIcon} className="h-10 w-10 mr-2" />
+            <p>- English Class</p>
+          </div>
+          <div className="flex flex-row lg:justify-center items-center px-3">
+            <img src={geographyIcon} className="h-10 w-10 mr-2" />
+            <p>- Elective</p>
+          </div>
         </div>
-        <div className="flex flex-row justify-center items-center px-3">
-          <img src={scienceIcon} className="h-10 w-10 mr-2" />
-          <p>- Science Class</p>
-        </div>
-        <div className="flex flex-row justify-center items-center px-3">
-          <img src={historyIcon} className="h-10 w-10 mr-2" />
-          <p>- History Class</p>
-        </div>
-        <div className="flex flex-row justify-center items-center px-3">
-          <img src={englishIcon} className="h-10 w-10 mr-2" />
-          <p>- English Class</p>
-        </div>
-        <div className="flex flex-row lg:justify-center items-center px-3">
-          <img src={geographyIcon} className="h-10 w-10 mr-2" />
-          <p>- Elective</p>
+        <div className="mt-4 flex flex-row justify-center items-center">
+          <p className="mr-5">Sort By Subject</p>
+          <select
+            value={selected}
+            onChange={handleChange}
+            className="shadow-lg p-4 outline-none"
+          >
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.text}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
       <div className="flex justify-center items-center px-20">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {classesInfo.map((classes) => {
-            return (
-              <Card
-                name={classes.name}
-                image={mathIcon}
-                description={classes.description}
-                nameClass={stringUrl(classes.name)}
-              />
-            );
+            if (classes.subject === "Math") {
+              return (
+                <Card
+                  name={classes.name}
+                  image={mathIcon}
+                  description={classes.description}
+                  nameClass={stringUrl(classes.name)}
+                />
+              );
+            } else if (classes.subject === "History") {
+              return (
+                <Card
+                  name={classes.name}
+                  image={historyIcon}
+                  description={classes.description}
+                  nameClass={stringUrl(classes.name)}
+                />
+              );
+            } else if (classes.subject === "English") {
+              return (
+                <Card
+                  name={classes.name}
+                  image={englishIcon}
+                  description={classes.description}
+                  nameClass={stringUrl(classes.name)}
+                />
+              );
+            } else if (classes.subject === "Science") {
+              return (
+                <Card
+                  name={classes.name}
+                  image={scienceIcon}
+                  description={classes.description}
+                  nameClass={stringUrl(classes.name)}
+                />
+              );
+            } else if (classes.subject === "Elective") {
+              return (
+                <Card
+                  name={classes.name}
+                  image={geographyIcon}
+                  description={classes.description}
+                  nameClass={stringUrl(classes.name)}
+                />
+              );
+            }
           })}
-
-          {/* // <Card
-            //   name={classInfo.name}
-            //   image={classInfo.pic}
-            //   description={classInfo.description}
-            //   nameClass={classInfo.slug}
-            // /> */}
         </div>
       </div>
     </div>
