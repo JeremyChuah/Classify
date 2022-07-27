@@ -8,7 +8,7 @@ import Jad from "./sq2.png";
 var profiles = [
     {
      img: Jad,   
-     name: 'Jad Baziam',
+     name: 'Jad Bazian',
      title: 'Project Lead/Business Lead',
     },
    
