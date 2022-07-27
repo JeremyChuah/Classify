@@ -8,3 +8,46 @@
     background-color: white;
     border-radius: 2px;
 }
+
+.btn {
+    display: none;
+    right: 10px;
+    top: 7px;
+    padding: 5px;
+    color: #000;
+    font-size: 18px;
+}
+
+.list {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.items {
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+    .list {
+        flex-direction: column;
+        height: auto;
+    }
+    .items:nth-child(0){
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        margin-top: 50px;
+    }
+    .items {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.555);
+        text-align: center;
+        margin-right: 0px;
+        padding: 20px 0;
+    }
+    .btn {
+        display: block;
+    }
+}
