@@ -10,7 +10,7 @@ function CourseLoadDisplay(props) {
           <h1 className="text-2xl">Your Schedule Overview</h1>
           <p>Calculated using our ratings database</p>
         </div>
-        <div className="mt-7 flex flex-col lg:flex-row justify-around items-center ">
+        <div className="mt-7 flex flex-col 2xl:flex-row justify-around items-center ">
           <div className="xl:mr-0 lg:mr-4 mr-0">
             <h2 className="font-bold">Class Enjoyment</h2>
           </div>
@@ -24,7 +24,7 @@ function CourseLoadDisplay(props) {
             />
           </div>
         </div>
-        <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
+        <div className="mt-7 flex flex-col 2xl:flex-row justify-around items-center">
           <div className="xl:mr-0 lg:mr-4 mr-0">
             <h2 className="font-bold">Course Difficulty</h2>
           </div>
@@ -37,7 +37,7 @@ function CourseLoadDisplay(props) {
             />
           </div>
         </div>
-        <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
+        <div className="mt-7 flex flex-col 2xl:flex-row justify-around items-center">
           <div>
             <h2 className="font-bold">Course Load</h2>
           </div>
@@ -50,7 +50,7 @@ function CourseLoadDisplay(props) {
             />
           </div>
         </div>
-        <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
+        <div className="mt-7 flex flex-col 2xl:flex-row justify-around items-center">
           <div>
             <h2 className="font-bold">Homework</h2>
             <p>hours per day</p>
