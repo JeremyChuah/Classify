@@ -27,7 +27,7 @@ function MeterBoard(props) {
           <ProgressBar
             completed={enj || 0}
             bgColor="#1E2F4F"
-            maxCompleted={5}
+            maxCompleted={10}
             customLabel={`${enj}`}
           />
         </div>
@@ -40,7 +40,7 @@ function MeterBoard(props) {
           <ProgressBar
             completed={diff || 0}
             bgColor="#1E2F4F"
-            maxCompleted={5}
+            maxCompleted={10}
             customLabel={`${diff}`}
           />
         </div>
@@ -54,21 +54,21 @@ function MeterBoard(props) {
             customLabel={`${ld}`}
             completed={ld || 0}
             bgColor="#1E2F4F"
-            maxCompleted={5}
+            maxCompleted={10}
           />
         </div>
       </div>
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
         <div>
           <h2 className="font-bold">Homework</h2>
-          <p>In hours (max 50)</p>
+          <p>Hours per day</p>
         </div>
         <div className="md:w-4/5 w-full ml-5">
           <ProgressBar
             customLabel={`${hw}`}
             completed={hw || 0}
             bgColor="#1E2F4F"
-            maxCompleted={50}
+            maxCompleted={10}
           />
         </div>
       </div>

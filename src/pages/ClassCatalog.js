@@ -144,8 +144,8 @@ const ClassCatalog = () => {
           </select>
         </div>
       </div>
-      <div className="flex justify-center items-center px-20">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
+      <div className="flex justify-center items-center px-5">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-7">
           {classesInfo.map((classes) => {
             if (classes.subject === "Math") {
               return (

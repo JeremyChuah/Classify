@@ -16,10 +16,6 @@ function ClassInfo(props) {
   const [classInfo, setClassInfo] = useState([]);
   const [cPopup, setCpopup] = useState(false);
 
-  useEffect(() => {
-    fetchClass();
-  }, []);
-
   const fetchClass = async () => {
     try {
       const classData = await API.graphql(graphqlOperation(listClasses));
@@ -119,29 +115,6 @@ function ClassInfo(props) {
         </div>
       </div>
 
-      {/* {classInfo.map((classes) => {
-        return (
-          <Popup
-            openPopup={openPopup}
-            setOpenPopup={setOpenPopup}
-            title={"Add Rating"}
-          >
-            <AddRating
-              id={classes.id}
-              enjoyment={classes.enjoyment}
-              difficulty={classes.difficulty}
-              load={classes.load}
-              homework={classes.homework}
-              entries={classes.entries}
-              onAddRating={() => {
-                fetchClass();
-                setOpenPopup(false);
-                props.onAdd();
-              }}
-            />
-          </Popup>
-        );
-      })} */}
       <Popup openPopup={cPopup} setOpenPopup={setCpopup} title={"Add Comment"}>
         <AddComment
           id={props.id}
