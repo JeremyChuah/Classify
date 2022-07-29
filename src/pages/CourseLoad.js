@@ -12,6 +12,9 @@ const options = [
     label: "AP Language and Composition",
   },
   { value: "AP Environmental Science", label: "AP Environmental Science" },
+  { value: "AP Computer Science A", label: "AP Computer Science A" },
+  { value: "Honors Pre-Calculus", label: "Honors Pre-Calculus" },
+  { value: "Honors Physics", label: "Honors Physics" },
 ];
 
 function CourseLoad({ data }) {
