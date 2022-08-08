@@ -6,7 +6,6 @@ import Faizan from "./sqqqq.jpg";
 import Jad from "./sq2.png";
 
 function About() {
-
   return (
     <div>
       <div class="wrapper">
@@ -21,7 +20,7 @@ function About() {
               />
             </div>
             <h3>Jad Bazian</h3>
-            <p class="role">Project Lead/Business Lead</p>
+            <p class="role">Chief Executive Officer</p>
           </div>
           <div class="team_member">
             <div class="team_img">
@@ -32,7 +31,7 @@ function About() {
               />
             </div>
             <h3>Jeremy Chuah</h3>
-            <p class="role">Lead Engineering & Product</p>
+            <p class="role">Chief Technology Officer</p>
           </div>
           <div class="team_member">
             <div class="team_img">

@@ -89,41 +89,6 @@ function ClassInfo(props) {
           <div>{/* <img src={client} className="hidden lg:block" /> */}</div>
         </div>
       </div>
-
-      <div>
-        <div className="flex justify-center flex-col items-center mt-20">
-          <div className="font-bold text-2xl mb-2">Comment Board</div>
-          <Button
-            variant="outlined"
-            endIcon={<AddIcon />}
-            onClick={() => setCpopup(true)}
-          >
-            Add a Comment
-          </Button>
-        </div>
-        <div className="lg:grid xl:grid-cols-4 lg:grid-cols-2 justify-center items-center content-center gap-10 md:px-5 w-full">
-          {comment.map((comments) => {
-            return (
-              <div>
-                <CommentCard
-                  subject={comments.subject}
-                  content={comments.content}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <Popup openPopup={cPopup} setOpenPopup={setCpopup} title={"Add Comment"}>
-        <AddComment
-          id={props.id}
-          onAddComment={() => {
-            fetchComments();
-            setCpopup(false);
-          }}
-        ></AddComment>
-      </Popup>
     </div>
   );
 }

@@ -156,7 +156,7 @@ function AddRating(props) {
           </div>
         </div>
         <div className="mb-3">
-          <p>Homework (Hours per day)</p>
+          <p>Homework (Hours per week)</p>
           <div className="flex flex-row">
             <Slider
               max={10}
