@@ -58,7 +58,7 @@ function CourseLoadDisplay(props) {
           <div className="md:w-4/5 w-full ml-5">
             <ProgressBar
               customLabel={`${props.hw}`}
-              completed={props.hw || 0}
+              completed={props.hw + 0.95 || 0}
               bgColor="#1E2F4F"
               maxCompleted={10}
             />
