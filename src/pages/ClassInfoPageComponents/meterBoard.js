@@ -61,7 +61,7 @@ function MeterBoard(props) {
       <div className="mt-7 flex flex-col lg:flex-row justify-around items-center">
         <div>
           <h2 className="font-bold">Homework</h2>
-          <p>Hours per day</p>
+          <p>Hours per week</p>
         </div>
         <div className="md:w-4/5 w-full ml-5">
           <ProgressBar

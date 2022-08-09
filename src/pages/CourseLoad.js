@@ -15,6 +15,21 @@ const options = [
   { value: "AP Computer Science A", label: "AP Computer Science A" },
   { value: "Honors Pre-Calculus", label: "Honors Pre-Calculus" },
   { value: "Honors Physics", label: "Honors Physics" },
+  { value: "AP Economics", label: "AP Economics" },
+  { value: "AP Government", label: "AP Government" },
+  { value: "AP Literature", label: "AP Literature" },
+  { value: "AP Human Geography", label: "AP Human Geography" },
+  { value: "AP Art History", label: "AP Art History" },
+  { value: "AP Spanish", label: "AP Spanish" },
+  { value: "AP Calculus BC", label: "AP Calculus BC" },
+  { value: "AP Calculus AB", label: "AP Calculus AB" },
+  { value: "AP Physics 1/2", label: "AP Physics 1/2" },
+  { value: "AP Physics C", label: "AP Physics C" },
+  { value: "AP European History", label: "AP European History" },
+  { value: "AP Statistics", label: "AP Statistics" },
+  { value: "AP Psychology", label: "AP Psychology" },
+  { value: "AP Chemistry", label: "AP Chemistry" },
+  { value: "Engineering Science (PLTW)", label: "Engineering Science (PLTW)" },
 ];
 
 function CourseLoad({ data }) {

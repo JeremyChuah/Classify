@@ -7,7 +7,15 @@ import Jad from "./sq2.png";
 
 function About() {
   return (
-    <div>
+    <div className="mt-10">
+      <div className="bg-gray-100 text-center py-6 flex md:flex-row flex-col justify-around items-center mx-20 rounded-md">
+        <div className="text-4xl font-bold text-black">Our mission</div>
+        <div className="w-1/2 text-xl">
+          Here at Classify we strive to help students one class at a time! From
+          helping students find out more information on classes to helping
+          preview schedules, Classify has all students covered!
+        </div>
+      </div>
       <div class="wrapper">
         <h1 className="about-us-text4">Our Co-Founders</h1>
         <div class="team">
