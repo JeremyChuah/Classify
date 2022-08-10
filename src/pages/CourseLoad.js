@@ -30,6 +30,7 @@ const options = [
   { value: "AP Psychology", label: "AP Psychology" },
   { value: "AP Chemistry", label: "AP Chemistry" },
   { value: "Engineering Science (PLTW)", label: "Engineering Science (PLTW)" },
+  { value: "AP Biology", label: "AP Biology" },
 ];
 
 function CourseLoad({ data }) {
