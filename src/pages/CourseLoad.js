@@ -5,7 +5,7 @@ import Select from "react-select";
 import CourseLoadDisplay from "./courseloadcomponents/courseLoadDisplay";
 
 const options = [
-  { value: "AP American History", label: "AP American History" },
+  { value: "American History", label: "American History" },
   { value: "AP World History: Modern", label: "AP World History: Modern" },
   {
     value: "AP Language and Composition",
