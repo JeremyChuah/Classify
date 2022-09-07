@@ -12,7 +12,7 @@ const aboutgrid = (props) => {
       <div className="md:grid md:grid-cols-2 justify-center items-center gap-10 mt-5 text-center">
         <Aboutcard
           image={Attendance}
-          name={"Helping Kids Make the right decisions"}
+          name={"Helping Kids Make the Right Decisions"}
           description={
             "We want to assist in choosing the best classes for students."
           }
