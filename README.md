@@ -11,4 +11,4 @@ We used React, AWS, and Google Domains to build this application. We used React 
 However, when it was running, developers could start up the applications using standard react ``npm start``.
 
 ## Video Demo of the project
-[video demo]([https://pages.github.com/](https://youtu.be/IlprIFKkwSM)https://youtu.be/IlprIFKkwSM)
+[video demo](https://youtu.be/IlprIFKkwSM)
